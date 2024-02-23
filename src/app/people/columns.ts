@@ -1,5 +1,13 @@
 import { ColumnDef } from "@tanstack/react-table";
-import { Person } from "@/data";
+// import { Person } from "@/data";
+
+export type Person = {
+  id: number;
+  first_name: string;
+  last_name: string;
+  email: string;
+  gender: string;
+};
 
 export const columns: ColumnDef<Person>[] = [
   {
@@ -7,11 +15,11 @@ export const columns: ColumnDef<Person>[] = [
     header: "Person ID",
   },
   {
-    accessorKey: "first-name",
+    accessorKey: "first_name",
     header: "First Name",
   },
   {
-    accessorKey: "last-name",
+    accessorKey: "last_name",
     header: "Last Name",
   },
   {
